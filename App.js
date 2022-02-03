@@ -1,20 +1,44 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import { commonScreenOptions } from "./components/screenOptions/options";
+import WelcomeScreen from "./screens/welcomePages/WelcomeScreen";
+import SignUpScreen from "./screens/welcomePages/SignUpScreen";
+import AddUserDetailsScreen from "./screens/welcomePages/AddUserDetailsScreen";
+import LoginScreen from "./screens/welcomePages/LoginScreen";
+import Dashboard from "./screens/dashboard/Dashboard";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="WelcomeScreen"
+          component={WelcomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SignUpScreen"
+          component={SignUpScreen}
+          options={commonScreenOptions}
+        />
+        <Stack.Screen
+          name="AddUserDetails"
+          component={AddUserDetailsScreen}
+          options={commonScreenOptions}
+        />
+        <Stack.Screen
+          name="LoginScreen"
+          component={LoginScreen}
+          options={commonScreenOptions}
+        />
+        <Stack.Screen
+          name="Dashboard"
+          component={Dashboard}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
