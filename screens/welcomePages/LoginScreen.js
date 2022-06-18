@@ -49,7 +49,7 @@ export default function LoginScreen({ navigation }) {
           btnStyle={"mx-auto my-8"}
           text={"Log In"}
           btnTextStyles={"text-gray-50"}
-          onPressHandler={() => navigation.navigate("Dashboard")}
+          onPressHandler={() => navigation.navigate("BottomNav")}
         />
 
         <Text style={[tw`py-5 mx-auto mt-8 text-gray-50`]}>

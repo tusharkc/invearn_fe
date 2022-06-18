@@ -47,7 +47,7 @@ const AddUserDetailsScreen = ({ navigation }) => {
         btnStyle={"mx-auto my-8"}
         btnTextStyles={"text-gray-50 text-xl"}
         text={"Submit"}
-        onPressHandler={() => navigation.navigate("Dashboard")}
+        onPressHandler={() => navigation.navigate("BottomNav")}
       />
     </ScrollView>
   );

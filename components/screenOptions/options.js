@@ -13,3 +13,17 @@ const commonScreenOptions = {
 };
 
 export { commonScreenOptions };
+
+const orderScreenOptions = {
+  title: "Stock Name",
+  headerShown: true,
+  headerTransparent: true,
+  headerBackImage: () => <BackButton />,
+  headerStyle: {
+    backgroundColor: "#2A2B2B",
+    elevation: 0,
+    shadowOpacity: 0,
+  },
+};
+
+export { orderScreenOptions };
